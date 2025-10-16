@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-
     async function returnBook(loanId) {
         try {
             const response = await fetch(`/api/loans/${loanId}`, {
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (error) {
         }
     }
-
 
     if (form) {
         form.addEventListener("submit", async function (e) {
@@ -72,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    
 
     if (clearBtn) {
         clearBtn.addEventListener("click", async function () {

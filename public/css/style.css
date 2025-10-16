@@ -12,17 +12,11 @@ body{
     line-height:1.5;
 }
 .container{max-width:900px;margin:20px auto;padding:0 16px;}
-
 .site-header{background:white;border-bottom:1px solid #e6edf3;padding:12px 0}
-
 .site-header .brand{display:inline-block;margin:0;color:var(--accent)}
-
 .main-nav{float:right}
-
 .main-nav a{margin-left:12px;text-decoration:none;color:var(--accent)}
-
 h2{margin-top:8px}
-
 .search-form{margin:12px 0}
 .search-form input{padding:8px;width:60%;max-width:420px;border:1px solid #d1d5db;border-radius:4px}
 .search-form button{padding:8px 12px;margin-left:8px}
@@ -32,6 +26,5 @@ h2{margin-top:8px}
 button{background:var(--accent);color:white;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
 button.danger{background:#e53e3e}
 .loan-list{list-style:none;padding:0}
-
 .loan-list li{background:white;padding:8px;margin-bottom:6px;border:1px solid #e6edf3}
 footer.footer{margin-top:30px;padding:12px 0;color:var(--muted);font-size:14px;text-align:center}
