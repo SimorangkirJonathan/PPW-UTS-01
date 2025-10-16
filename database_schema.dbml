@@ -1,0 +1,44 @@
+// ERD untuk Online Library System
+// Copy paste code ini ke https://dbdiagram.io/
+
+Table books {
+  id integer [primary key]
+  title varchar(255) [not null]
+  author varchar(255) [not null]
+  year integer [not null]
+  status enum('available', 'borrowed') [default: 'available']
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table borrows {
+  id integer [primary key]
+  borrower_name varchar(255) [not null]
+  borrower_nim varchar(10) [not null]
+  book_id integer [not null]
+  borrowed_at timestamp [not null]
+  returned_at timestamp [null]
+  created_at timestamp
+  updated_at timestamp
+}
+
+// Relationships
+Ref: borrows.book_id > books.id [delete: cascade]
+
+// Table Notes
+Note: '''
+  # Online Library System ERD
+  
+  ## Tabel Books
+  - Menyimpan data buku (judul, penulis, tahun, status)
+  - Status: available/borrowed
+  
+  ## Tabel Borrows  
+  - Menyimpan data peminjaman
+  - Foreign key ke books
+  - returned_at null = masih dipinjam
+  
+  ## Relationship
+  - One book can have many borrows (1:N)
+  - One borrow belongs to one book
+'''
