@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1> Online Library System</h1>
+        <p>Sistem Peminjaman Buku Online</p>
+    </header>
+
+    <!-- Search Section -->
+    <section id="search-section">
+        <h2>Cari Buku</h2>
+        <input type="text" id="searchInput" placeholder="Cari berdasarkan judul, penulis, atau tahun...">
+        <button onclick="searchBooks()">Cari</button>
+        <button onclick="clearSearch()">Clear</button>
+    </section>
+
+    <!-- Book List Section -->
+    <section id="book-section">
+        <h2>Daftar Buku</h2>
+        <div id="bookList">
+            <!-- Buku akan tampil di sini -->
+        </div>
+    </section>
+
+    <!-- Form Peminjaman -->
+    <section id="form-section">
+        <h2> Form Peminjaman</h2>
+        <form id="borrowForm" onsubmit="borrowBook(event)">
+            <label>Nama Lengkap:</label>
+            <input type="text" id="borrowerName" required>
+            
+            <label>NIM:</label>
+            <input type="text" id="borrowerNIM" maxlength="10" required>
+            
+            <label>Pilih Buku:</label>
+            <select id="bookTitle" required>
+                <option value="">-- Pilih Buku --</option>
+            </select>
+            
+            <button type="submit">Pinjam Buku</button>
+        </form>
+    </section>
+
+    <!-- Daftar Pinjaman -->
+    <section id="borrow-section">
+        <h2> Daftar Pinjaman</h2>
+        <div id="borrowedList">
+            <!-- Daftar pinjaman akan tampil di sini -->
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-
-
-
+        Schema::create('loans', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('nim');
+            $table->string('judul');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -21,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('jobs');
-        Schema::dropIfExists('job_batches');
-        Schema::dropIfExists('failed_jobs');
+        Schema::dropIfExists('loans');
     }
 };
